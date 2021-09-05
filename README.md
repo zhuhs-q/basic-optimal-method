@@ -4,6 +4,8 @@
 * for me, the project is for reviewing those algorithms, and i hope it may help you in some ways.
 * every class shall be updated within a week
 ## descent-method
+* In fact, all the descent algorithms are examples of it, the difference is the norm they use
+* for convenience, all the descent algorithms equiped with backtracking line searching
 ### gradient descent method
 * use backtracking for line searching
 * not packed yet
