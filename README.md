@@ -6,6 +6,7 @@
 ## descent-method
 * In fact, all the descent algorithms are examples of it, the difference is the norm they use
 * for convenience, all the descent algorithms equiped with backtracking line searching
+* examine it with "descent_method_main.jl"
 ### gradient descent method
 * example of steepest descent method with l2 norm
 * use backtracking for line searching
@@ -14,5 +15,9 @@
 ### coordinate descent method
 * example of steepest descent method with l1 norm
 * use backtracking for line searching
+* not packed yet
+* example : x' * x
+### newton method
+* example of steepest descent method with hessian matrix
 * not packed yet
 * example : x' * x
