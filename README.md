@@ -7,6 +7,12 @@
 * In fact, all the descent algorithms are examples of it, the difference is the norm they use
 * for convenience, all the descent algorithms equiped with backtracking line searching
 ### gradient descent method
+* example of steepest descent method with l2 norm
+* use backtracking for line searching
+* not packed yet
+* example : x' * x
+### coordinate descent method
+* example of steepest descent method with l1 norm
 * use backtracking for line searching
 * not packed yet
 * example : x' * x
