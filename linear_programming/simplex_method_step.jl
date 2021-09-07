@@ -3,9 +3,9 @@ epsilon = 0.00000001 #default, be small anyway
 function simplex_method_step(A, b, c, initial_point, dimension,constraint)
     inter_set = zeros(Float64,(dimension,dimension))
     inter_set_b = zeros(Float64,dimension)
-    other_set = zeros(Float64,(constraint - dimenstion,dimension))
+    other_set = zeros(Float64,(constraint - dimension,dimension))
     other_set_b = zeros(Float64,(constraint - dimension))
-    new_point = zeros(Float64,(dimension,constraint - dimension,:))
+    new_point = zeros(Float64,(dimension,constraint - dimension, dimension))
     new_data = zeros(Float64,(dimension,constraint - dimension))
     inter = A * initial_point
     j = 0

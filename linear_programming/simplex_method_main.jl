@@ -1,8 +1,8 @@
 using LinearAlgebra
 include("simplex_method_loop.jl")
 include("simplex_find_initial_point.jl")
-dimension = 5 #default
-constraint= 50 #default
+dimension = 3 #default
+constraint= 6 #default
 A = rand(Float64,(constraint,dimension)) #default
 b = rand(Float64,constraint) #default
 c = rand(dimension) #default

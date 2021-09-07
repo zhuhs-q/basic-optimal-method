@@ -12,8 +12,8 @@ function big_M(A, b, c, dimension, constraint)
     end
     for i = dimension + 1 : dimension + constraint
         new_c[i] = -M
-        A[i - dimension, i] = 1
-        A[i - dimension + constraint, i] = -1
+        new_A[i - dimension, i] = 1
+        new_A[i - dimension + constraint, i] = -1
     end 
     for i = 1 : constraint
         new_b = b[i]
