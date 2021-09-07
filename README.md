@@ -21,3 +21,10 @@
 * example of steepest descent method with hessian matrix
 * not packed yet
 * example : x' * x
+
+## simplex method
+* in my opinion, the simplex consists of two stage: find the initial point and find the optimal point
+### big M method -- to find the initial point
+* it's a clever trick to eliminate artificial point
+### simplex method
+* the code should be easy to understand with geometry
