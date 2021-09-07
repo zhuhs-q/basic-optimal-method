@@ -22,9 +22,8 @@
 * not packed yet
 * example : x' * x
 
-## simplex method
-* in my opinion, the simplex consists of two stage: find the initial point and find the optimal point
-### big M method -- to find the initial point
-* it's a clever trick to eliminate artificial point
+## Linear programming
+Linear programming is never easy programming, clever trick and geomerical intuition lead us to a higher level
 ### simplex method
-* the code should be easy to understand with geometry
+* in my opinion, the simplex consists of two stage: find the initial point and find the optimal point. and in the program, these two stages are based on geometrical intuition and easy to understand.
+
