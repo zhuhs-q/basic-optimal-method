@@ -66,33 +66,6 @@ function simplex_method_loop(A, b, c, initial_point, dimension, constraint)
     return initial_point
 end
 
-function big_M(A, b, c, dimension, constraint)
-    M = 10000000000000 # default, should big any way
-    new_c = zeros(Float64, dimension + constraint)
-    new_A = zeros(Float64, (2 * constraint, constraint + dimension))
-    new_b = zeros(Float64, 2 * constraint)
-    for i = 1:dimension
-        new_c[i] = c[i]
-    end
-    for i = dimension + 1:dimension + constraint
-        new_c[i] = -M
-        new_A[i - dimension, i] = 1
-        new_A[i - dimension + constraint, i] = -1
-    end 
-    for i = 1:constraint
-        new_b[i] = b[i]
-        for j = 1:dimension
-            new_A[i,j] = A[i,j]
-        end
-    end
-    initial_point = zeros(Float64, dimension + constraint)
-    for i = dimension + 1:dimension + constraint
-        initial_point[i] = b[i - dimension]  
-    end
-    initial_point = simplex_method_loop(new_A, new_b, new_c, initial_point, dimension + constraint, 2 * constraint)
-    return initial_point
-end
-
 function geometry_find(A, b, c, dimension, constraint)
     initial_point = inv(A[1:dimension,:]) * b[1:dimension]
     abandoned_set = zeros(Float64, (constraint - dimension, dimension))
@@ -120,8 +93,8 @@ function geometry_find(A, b, c, dimension, constraint)
     return initial_point
 end
 
-dimension = 5 # default
-constraint = 7 # default
+dimension = 20 # default
+constraint = 100 # default
 A = 100 * rand(Float64, (constraint, dimension)) # default
 constraint_matrix = A
 b = 100 * rand(Float64, constraint) # default
