@@ -27,5 +27,5 @@ Linear programming is never easy programming, clever trick and geomerical intuit
 ### simplex method
 * in my opinion, the simplex consists of two stage: find the initial point and find the optimal point. and in the program, these two stages are based on geometrical intuition and easy to understand.
 ### simplex method with cutting for Interger Programming
-* with cutting method, we can efficiently solve Interger Programming, also a clver trick.
+* we implement cutting plane method with gomory's cut
 
